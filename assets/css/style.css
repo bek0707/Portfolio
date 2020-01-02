@@ -3,13 +3,13 @@
 	min-height: 100%;
 }	
 header {
-    background-color:white;
+    background-color: #ffffff;
     border-bottom: solid 1px #dddddd;
     min-height: 75px;
 }
 
 .logo {
-    color: white;
+    color: #ffffff;
     background-color: #4aaaa5;
     padding-left: 20px; 
     padding-right: 20px;
@@ -20,8 +20,8 @@ header {
     margin-top: 0;
 }
 #Top-Banner {
-    background-color: white;
-    color:white;
+    background-color:#ffffff;
+    color: #dddddd;
     font-family: Georgia, 'Times New Roman', Times, serif;    
     padding-left: 20px;
     margin: 0;
@@ -34,9 +34,35 @@ ul {
     display: inline;
     position: relative;
     top:0;
-    width:100%;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1em;
+    margin-left: 1em;
 }
+
+nav ul li a{
+    color: #777777;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #ffffff;
+    background: #4aaaa5;
+    padding: 5px;
+    transition: .5s;
+}
+
+nav ul li{
+    border-left: 1px solid #cccccc;
+}
+
+nav ul li a.active{
+    color: black;
+}
+
+.nav ul li a.focus{
+    color: black;
+}
+
 li {
     float:right;
     display: block;
@@ -55,6 +81,7 @@ li {
 nav {
     color:#777777;
     margin-right: 100px;
+    font-weight: normal;
 }
 element.style {
     width: 900px;
@@ -76,7 +103,7 @@ h1 {
     padding-right: -20px;
 }
 
-img {
+img.about-photo {
     height: 150px;
     width: 150px;
     padding-left: 20px;
@@ -84,7 +111,8 @@ img {
     margin-right: 20px;
     margin-top: 5px;
     float: left;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+    transform: rotate(90deg);
 	}
 
 p {
@@ -95,30 +123,31 @@ p {
 }
 
 .content {
-    border: solid 1px #dddddd;
+    border: 1x solid #dddddd;
     width: 960px;
     margin-top: 30px; 
     margin-left: 120px;
     margin-bottom: 120px;
     margin-right: 120px;
-    background-color:white;
+    background-color: #ffffff;
     padding-bottom: auto 50px;
     padding-left: auto 20px;
     padding-right: auto 20px;
     overflow: auto;
+    clear: both;
 }
 
 footer {
-    border-top: 8px solid #4aaaa5;
-    text-align: center;
-    background-color:  #666666;
-    height:50px;
-    margin-top:-50;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 10px;
+    position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8em;
+	color: #cccccc;
+	background-color: #666666;
+    border-top: 7px solid #4aaaa5;
+    z-index: 1000;
 }
 
 .Form {
@@ -166,42 +195,58 @@ input {
 
  input[type=submit] {
     background-color: #4aaaa5;
-    color: white;
+    color: #ffffff;
     padding: 10px;
     width: 100px;
  }
  
   
-  div.gallery img {
-    width: 600;
-    height: 400;
-    margin-top: 25px;
-    margin-left: 25px;
-    border-color: #666666;
-    float: left;
+ .image-port{
+    width: 220px;
+    height: 200px;
+}
+
+
+.portfolio-item{
     position: relative;
-  }
-  
-  div.desc {
+    transition: transform .2 ease-out;
+    height: 250px;
+    width: 250px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: left;
+    height: 325px;
+    width: 325px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    margin-left: 5%;
+    margin-right: -1%;
+    margin-bottom: 4%;
+}
+
+.portfolio-item:nth-child(even){
+    margin-left: 25px;
+}
+
+.item-name{
+    position: relative;
     text-align: center;
     background-color: #4aaaa5;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    height:35px;
-    border-color: #666666;
-    position: absolute;
-    width: 150px;
-    margin-top: 140px;
-    margin-left: 45px;
-  }
+    padding: 1em;
+    color: #ffffff;
+    z-index: 900;
+    top: 10;
+    font-size: 18px;
+    padding: 5%;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
   
-  .responsive {
-    float: left;
-    width: 24.99999%;
-    margin-bottom: 25px;
-  }
-
-
 form {
 	margin-top: 27px;
 }
